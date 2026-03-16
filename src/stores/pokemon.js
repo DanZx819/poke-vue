@@ -3,21 +3,12 @@ import { defineStore } from "pinia";
 
 export const usePokemonStore = defineStore("pokemon", () => {
   const pokemons = ref([]);
-  const urlBaseImg = ref(
-    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/",
-  );
-  const urlBasePokemon = ref("https://pokeapi.co/api/v2/pokemon/");
+  
+  
   const searchPokemon = ref("");
-  const tipos = ref([]);
+ 
 
-  const pokemonTipos = async () =>{
-    const res = await fetch(`${urlBasePokemon.value}/`);
-
-    const data = await res.json();
-
-    tipos.value = data.types;
-    
-  }
+  
 
   const fetchPokemons = async () => {
     const res = await fetch(
