@@ -57,7 +57,8 @@ src/
 │   └── default.vue
 ├── pages/           # Páginas da aplicação
 │   ├── index.vue
-│   └── about.vue
+│   └── about
+|     └──about.vue
 ├── stores/          # Stores Pinia
 │   └── pokemon.js
 └── router/          # Configuração de rotas
