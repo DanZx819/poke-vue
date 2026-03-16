@@ -122,8 +122,8 @@
           </div>
 
           <div class="tech-item">
-            <div class="feature-icon">
-              <img src="../../assets/api.png" alt="API" width="48" height="48" />
+            <div class="tech-logo api">
+              <img src="../../assets/api.png" alt="PokéAPI" width="50" height="50" />
             </div>
             <h4>PokéAPI</h4>
             <p>REST API</p>
