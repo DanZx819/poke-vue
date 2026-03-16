@@ -56,7 +56,7 @@
 
     <!-- Footer opcional -->
     <footer class="pokedex-footer">
-      <p>PokéDex © 2024 - Feito com Vue 3</p>
+      <p>PokéDex © 2026 - Feito com Vue 3</p>
     </footer>
   </div>
 </template>
@@ -146,9 +146,7 @@ const closeMenu = () => {
   align-items: center;
 }
 
-.spacer {
-  /* Espaço vazio à esquerda para centralizar o título */
-}
+
 
 .title {
   font-size: 48px;
