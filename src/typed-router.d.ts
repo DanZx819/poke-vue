@@ -37,6 +37,13 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    '/pokemon/[id]': RouteRecordInfo<
+      '/pokemon/[id]',
+      '/pokemon/:id',
+      { id: ParamValue<true> },
+      { id: ParamValue<false> },
+      | never
+    >,
   }
 
   /**
@@ -59,6 +66,12 @@ declare module 'vue-router/auto-routes' {
     'src/pages/about/index.vue': {
       routes:
         | '/about/'
+      views:
+        | never
+    }
+    'src/pages/pokemon/[id].vue': {
+      routes:
+        | '/pokemon/[id]'
       views:
         | never
     }

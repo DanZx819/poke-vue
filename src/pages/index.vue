@@ -10,6 +10,7 @@
           v-for="pokemon in usePokemon.pokemonsFiltrados"
           :key="pokemon.id"
           :pokemon="pokemon"
+          @click="selectPokemon(pokemon)"
         />
       </div>
     </div>
@@ -18,23 +19,26 @@
 
 <script setup>
 import { usePokemonStore } from "@/stores/pokemon";
+
 import PokemonCard from "../components/PokemonCard.vue";
 import SearchBar from "../components/SearchBar.vue";
 import Default from "@/layouts/default.vue";
 
-import { onMounted,  ref, computed } from "vue";
-
+import { onMounted, ref, computed, reactive } from "vue";
+import { useRouter } from "vue-router";
 const usePokemon = usePokemonStore();
 
+let pokemonSelected = reactive(ref());
 
-
-onMounted(() =>{
+onMounted(() => {
   usePokemon.fetchPokemons();
-})
+});
 
+const router = useRouter();
 
-
-
+const selectPokemon = (pokemon) => {
+  router.push(`/pokemon/${pokemon.id}`)
+}
 </script>
 
 
