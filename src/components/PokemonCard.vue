@@ -40,6 +40,7 @@ const {pokemon} = defineProps({
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
 }
 
 .pokemon-card:hover {
